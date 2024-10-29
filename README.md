@@ -72,9 +72,11 @@ After running the optimization:
 1. Variant 1 provided a portfolio composition with minimized risk for a 5% expected return.
 2. Variant 2 yielded a portfolio with maximized returns while maintaining a capped risk level.
 
-# ***Output Example***
-> Optimal Weights for Variant 1: [0.10, 0.15, ..., 0.12]
-> Optimal Weights for Variant 2: [0.20, 0.05, ..., 0.10]
+### Output Example
+```bash
+Optimal Weights for Variant 1: [0.10, 0.15, ..., 0.12]
+Optimal Weights for Variant 2: [0.20, 0.05, ..., 0.10]
+```
 
 
 ## Conclusion
