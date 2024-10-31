@@ -7,7 +7,7 @@ from scipy.optimize import minimize
 tickers = ["AAPL", "MSFT", "GOOGL", "AMZN", "TSLA", "NVDA", "META", "BRK-B", "JNJ", "V", "UNH"]
 
 # Fetch historical adjusted close prices for the specified period
-data = yf.download(tickers, start="2022-01-01", end="2023-01-01")['Adj Close']
+data = yf.download(tickers, start="2000-01-01", end="2024-10-28")['Adj Close']
 
 # Step 2: Calculate daily returns and compute mean returns & covariance matrix
 returns = data.pct_change().dropna()
