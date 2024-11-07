@@ -1,90 +1,86 @@
-# Investment Portfolio Optimization
+# Portfolio Optimization Project
+
+This project focuses on optimizing an investment portfolio by maximizing returns and minimizing risk. Using historical stock data, we explore various portfolios, calculate their risks and returns, and identify optimal portfolios along the efficient frontier.
 
 ## Project Overview
 
-This project applies portfolio optimization principles to construct an investment portfolio using stocks from the American stock exchange. The portfolio optimization is based on Harry Markowitz's Modern Portfolio Theory, focusing on diversification to balance risk and return.
+The goal of this analysis is to construct an optimal portfolio that aligns with specific investment objectives, such as maximizing the Sharpe ratio, minimizing risk, or achieving a target return. We use techniques from modern portfolio theory to determine the efficient frontier and identify the most efficient asset allocation.
 
-### Objective
+### Key Objectives
 
-The goal is to construct two optimized portfolios under different conditions:
-1. **Variant 1**: Achieve an expected return of at least 5% with the lowest possible risk.
-2. **Variant 2**: Maximize the expected return while ensuring the portfolio variance does not exceed half of the highest individual stock variance.
+- Calculate daily and logarithmic returns for selected assets.
+- Compute the covariance and correlation matrices.
+- Generate and visualize random portfolios.
+- Plot the efficient frontier.
+- Identify optimal portfolios based on:
+  - Maximum Sharpe Ratio
+  - Minimum Risk
+  - Custom Target Returns (e.g., 25% and 35%)
 
+## Dataset
 
-## Table of Contents
+The data used for this analysis includes daily closing prices for selected assets over approximately 10 years. The data is stored in `akcje.txt` and includes 2776 entries.
 
-- [Installation](#installation)
-- [Data Collection](#data-collection)
-- [Optimization](#optimization)
-- [Results](#results)
-- [Conclusion](#conclusion)
-- [References](#references)
+## Analysis Steps
 
+1. **Data Preparation**
+   - Load data and calculate daily price changes.
+   - Compute daily and logarithmic returns.
 
-## Installation
+2. **Statistical Analysis**
+   - Generate covariance and correlation matrices for returns.
+   - Visualize correlations using a heatmap.
 
-To run this project, ensure the following packages are installed:
+3. **Portfolio Simulation**
+   - Generate a large number of random portfolios with varied allocations.
+   - Calculate portfolio risk, return, and Sharpe ratio for each simulated portfolio.
 
-```bash
-pip install yfinance pandas numpy scipy
-```
+4. **Efficient Frontier**
+   - Plot the efficient frontier based on portfolio risk-return combinations.
+   - Highlight optimal portfolios:
+     - **Max Sharpe Ratio Portfolio**
+     - **Min Risk Portfolio**
+     - Portfolios with target returns (e.g., 25%, 35%).
 
-
-## Data Collection
-
-We retrieve stock data from Yahoo Finance for the selected companies on the American stock exchange.
-
-Example ticker list:
-
-- Apple (AAPL)
-- Microsoft (MSFT)
-- Google (GOOGL)
-- Amazon (AMZN)
-- Tesla (TSLA)
-- Meta (META)
-- NVIDIA (NVDA)
-- JPMorgan Chase (JPM)
-- Johnson & Johnson (JNJ)
-- Visa (V)
-- Procter & Gamble (PG)
-
-# Code for Data Import and Preprocessing
-
-Historical stock data is fetched, and daily returns are calculated. The average returns and covariance matrix for these stocks are used to model portfolio risk and returns.
-
-
-## Optimization
-
-Portfolio Optimization Functions
-
-Two main optimization functions were defined:
-
-1. Variant 1: Minimizes risk while achieving a target return of 5%.
-2. Variant 2: Maximizes return with a capped portfolio variance.
-
-These optimizations are carried out using the scipy.optimize.minimize method.
-
+5. **Visualization**
+   - Display the efficient frontier plot, showcasing the different portfolio strategies.
 
 ## Results
 
-After running the optimization:
+The analysis produces a comprehensive visualization of the efficient frontier with marked points for:
+- **Max Sharpe Ratio Portfolio** (Highest risk-adjusted return)
+- **Min Risk Portfolio** (Lowest possible risk)
+- **Target Return Portfolios** (Portfolios meeting specific return goals)
 
-1. Variant 1 provided a portfolio composition with minimized risk for a 5% expected return.
-2. Variant 2 yielded a portfolio with maximized returns while maintaining a capped risk level.
+The following plot illustrates the efficient frontier and optimal portfolio allocations:
 
-### Output Example
-```bash
-Optimal Weights for Variant 1: [0.10, 0.15, ..., 0.12]
-Optimal Weights for Variant 2: [0.20, 0.05, ..., 0.10]
-```
+![Efficient Frontier Plot](R:\Portfolio_optimalization\efficient_frontier.png)
 
+## Getting Started
+
+### Prerequisites
+
+- Python (version 3.8+ recommended)
+- Required libraries:
+  - `numpy`
+  - `pandas`
+  - `matplotlib`
+  - `seaborn`
+
+### Running the Notebook
+
+1. Clone this repository.
+2. Ensure the dataset (`akcje.txt`) is in the same directory.
+3. Run each section of the Jupyter Notebook to reproduce the analysis and visualizations.
 
 ## Conclusion
 
-The optimized portfolios demonstrate effective diversification by balancing risk and return. Variant 1 allows for lower risk with a moderate return, while Variant 2 pursues higher returns within a limited risk framework. These approaches illustrate the benefits of Modern Portfolio Theory in real-world investment scenarios.
+This project provides insights into optimal portfolio allocation, balancing returns and risk. The efficient frontier and calculated optimal portfolios serve as a guide for constructing diversified portfolios tailored to specific investment strategies.
 
+## License
 
-### References
-- Harry Markowitz's Portfolio Theory (Nobel Prize, 1990)
-- Yahoo Finance
-- Scipy Documentation
+This project is licensed under the MIT License.
+
+---
+
+**Note:** Replace `R:\Portfolio_optimalization\efficient_frontier.png` with the actual path to your generated plot image.
