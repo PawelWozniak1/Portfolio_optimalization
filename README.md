@@ -1,10 +1,16 @@
 # Portfolio Optimization Project
 
-This project focuses on optimizing an investment portfolio by maximizing returns and minimizing risk. Using historical stock data, we explore various portfolios, calculate their risks and returns, and identify optimal portfolios along the efficient frontier.
+This project focuses on optimizing an investment portfolio using data from the American stock exchange. The analysis includes efficient frontier plotting, calculating the maximum Sharpe ratio portfolio, and visualizing optimal portfolios.
 
 ## Project Overview
 
 The goal of this analysis is to construct an optimal portfolio that aligns with specific investment objectives, such as maximizing the Sharpe ratio, minimizing risk, or achieving a target return. We use techniques from modern portfolio theory to determine the efficient frontier and identify the most efficient asset allocation.
+
+## Jupyter Notebook
+
+You can view all the code and detailed analysis in the Jupyter Notebook:
+
+- [Portfolio Optimization Notebook](Modern_Portfolio_Theory.ipynb) - This file contains the full analysis, from data preprocessing to plotting the efficient frontier.
 
 ### Key Objectives
 
