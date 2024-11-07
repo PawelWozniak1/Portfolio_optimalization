@@ -54,7 +54,7 @@ The analysis produces a comprehensive visualization of the efficient frontier wi
 
 The following plot illustrates the efficient frontier and optimal portfolio allocations:
 
-![Efficient Frontier Plot](R:\Portfolio_optimalization\efficient_frontier.png)
+![Efficient Frontier Plot](R:\image2\efficient_frontier.png)
 
 ## Getting Started
 
@@ -67,20 +67,7 @@ The following plot illustrates the efficient frontier and optimal portfolio allo
   - `matplotlib`
   - `seaborn`
 
-### Running the Notebook
-
-1. Clone this repository.
-2. Ensure the dataset (`akcje.txt`) is in the same directory.
-3. Run each section of the Jupyter Notebook to reproduce the analysis and visualizations.
-
 ## Conclusion
 
 This project provides insights into optimal portfolio allocation, balancing returns and risk. The efficient frontier and calculated optimal portfolios serve as a guide for constructing diversified portfolios tailored to specific investment strategies.
 
-## License
-
-This project is licensed under the MIT License.
-
----
-
-**Note:** Replace `R:\Portfolio_optimalization\efficient_frontier.png` with the actual path to your generated plot image.
