@@ -54,7 +54,7 @@ The analysis produces a comprehensive visualization of the efficient frontier wi
 
 The following plot illustrates the efficient frontier and optimal portfolio allocations:
 
-![Efficient Frontier Plot](images/efficient_frontier.png)
+![Efficient Frontier Plot](images/Efficient_frontier.png)
 
 ## Getting Started
 
