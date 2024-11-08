@@ -78,7 +78,19 @@ The following plot illustrates the efficient frontier and optimal portfolio allo
 
 ![Efficient Frontier Plot](images/Efficient_frontier.png)
 
-## Getting Started
+## Cash Allocation Comparison: Max Sharpe Ratio vs. Min Risk Portfolio
+
+The final part of the analysis involves comparing how cash is allocated in two optimized portfolios: one that maximizes the Sharpe ratio and another that minimizes risk. The following histograms display the asset allocation for each approach, showing how the cash is distributed differently to achieve the target objectives.
+
+### Max Sharpe Ratio Portfolio Allocation
+
+![Max Sharpe Ratio Allocation](images/Max_sharpe_ratio.png)
+
+### Min Risk Portfolio Allocation
+
+![Min Risk Portfolio Allocation](images/Min_risk.png)
+
+These histograms illustrate the emphasis on different assets based on the chosen optimization approach, with higher allocations in stocks that contribute to higher returns or lower risk as per the objective.
 
 ### Prerequisites
 
