@@ -1,6 +1,6 @@
 # Portfolio Optimization Project
 
-This project focuses on optimizing an investment portfolio using data from the American stock exchange. The analysis includes efficient frontier plotting, calculating the maximum Sharpe ratio portfolio, and visualizing optimal portfolios.
+This project demonstrates portfolio optimization using stock data from 11 major American companies. We retrieve historical stock prices from Yahoo Finance and calculate optimal portfolios along the efficient frontier. The analysis focuses on constructing portfolios with the maximum Sharpe ratio, minimum risk, and specific target returns.
 
 ## Project Overview
 
@@ -12,7 +12,7 @@ You can view all the code and detailed analysis in the Jupyter Notebook:
 
 - [Portfolio Optimization Notebook](Modern_Portfolio_Theory.ipynb) - This file contains the full analysis, from data preprocessing to plotting the efficient frontier.
 
-### Key Objectives
+## Key Objectives
 
 - Calculate daily and logarithmic returns for selected assets.
 - Compute the covariance and correlation matrices.
@@ -25,7 +25,22 @@ You can view all the code and detailed analysis in the Jupyter Notebook:
 
 ## Dataset
 
-The data used for this analysis includes daily closing prices for selected assets over approximately 10 years. The data is stored in `akcje.txt` and includes 2776 entries.
+The data is retrieved live from Yahoo Finance using the `yfinance` library. We selected 11 prominent companies from the American stock exchange:
+- Apple Inc. (`AAPL`)
+- Microsoft Corp. (`MSFT`)
+- Amazon.com Inc. (`AMZN`)
+- Alphabet Inc. (`GOOGL`)
+- Meta Platforms, Inc. (`META`)
+- Tesla Inc. (`TSLA`)
+- NVIDIA Corporation (`NVDA`)
+- Netflix Inc. (`NFLX`)
+- Intel Corporation (`INTC`)
+- Advanced Micro Devices, Inc. (`AMD`)
+- International Business Machines Corporation (`IBM`)
+
+## Data Retrieval
+
+We use the `yfinance` library to pull the historical adjusted closing prices for each stock from January 1, 2014, to January 1, 2024.
 
 ## Analysis Steps
 
@@ -38,15 +53,16 @@ The data used for this analysis includes daily closing prices for selected asset
    - Visualize correlations using a heatmap.
 
 3. **Portfolio Simulation**
-   - Generate a large number of random portfolios with varied allocations.
-   - Calculate portfolio risk, return, and Sharpe ratio for each simulated portfolio.
+   - Generate random portfolios to explore the risk-return spectrum.
+   - Compute portfolios that maximize the Sharpe ratio and minimize portfolio risk.
+   - Plot the efficient frontier and highlight optimal portfolios for specific target returns.
 
 4. **Efficient Frontier**
-   - Plot the efficient frontier based on portfolio risk-return combinations.
-   - Highlight optimal portfolios:
-     - **Max Sharpe Ratio Portfolio**
-     - **Min Risk Portfolio**
-     - Portfolios with target returns (e.g., 25%, 35%).
+   The efficient frontier shows the set of portfolios offering the highest expected return for a given level of risk. Key points on this curve include:
+   - **Maximum Sharpe Ratio Portfolio**: The portfolio that provides the best risk-adjusted return.
+   - **Minimum Risk Portfolio**: The portfolio with the lowest risk.
+   - **Target Return Portfolios**: Portfolios constructed to achieve specific return targets, e.g., 25% and 35% annualized returns.
+
 
 5. **Visualization**
    - Display the efficient frontier plot, showcasing the different portfolio strategies.
@@ -72,6 +88,7 @@ The following plot illustrates the efficient frontier and optimal portfolio allo
   - `pandas`
   - `matplotlib`
   - `seaborn`
+  - `yfinance`
 
 ## Conclusion
 
